@@ -7,5 +7,10 @@ namespace SalaryCalculator.Core.PayFrequencies
 			: base('W', "Week", "Weekly")
 		{
 		}
+
+		public override float CalculePeriodPay(float netIncome)
+		{
+			return netIncome / 52; // 52 weeks a year
+		}
 	}
 }

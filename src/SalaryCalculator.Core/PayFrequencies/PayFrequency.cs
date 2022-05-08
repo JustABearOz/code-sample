@@ -1,7 +1,7 @@
 ﻿
 namespace SalaryCalculator.Core.PayFrequencies
 {
-	public class PayFrequency : IPayFrequency
+	public abstract class PayFrequency : IPayFrequency
 	{
 		private readonly char key;
 
@@ -21,5 +21,7 @@ namespace SalaryCalculator.Core.PayFrequencies
 		public char Key => this.key;
 
 		public string Description => this.description;
+
+		public abstract float CalculePeriodPay(float netIncome);
 	}
 }

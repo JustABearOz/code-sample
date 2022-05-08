@@ -7,5 +7,7 @@
 		char Key { get; }
 
 		string Name { get; }
+
+		float CalculePeriodPay(float netIncome);
 	}
 }

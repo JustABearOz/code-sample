@@ -7,5 +7,10 @@ namespace SalaryCalculator.Core.PayFrequencies
 			: base('M', "Month", "Monthly")
 		{
 		}
+
+		public override float CalculePeriodPay(float netIncome)
+		{
+			return netIncome / 12; // 12 months a year
+		}
 	}
 }

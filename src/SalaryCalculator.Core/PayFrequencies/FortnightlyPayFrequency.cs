@@ -7,5 +7,9 @@ namespace SalaryCalculator.Core.PayFrequencies
 			: base('F', "Fortnight", "Fortnightly")
 		{
 		}
+		public override float CalculePeriodPay(float netIncome)
+		{
+			return netIncome / 26; // 26 fortnights per year
+		}
 	}
 }

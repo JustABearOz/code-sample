@@ -42,6 +42,7 @@ var calculations = new ISalaryCalculatorStep[]
 			new IncomeTaxCalculator(),
 		}),
 		new NetIncomeCalculator(),
+		new PayPacketCalculator(),
 	};
 
 // Calculate pay packet items
