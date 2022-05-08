@@ -11,7 +11,14 @@ namespace SalaryCalculator.Core
 	{
 		public void Apply(SalaryBreakdown salaryBrakdown)
 		{
-			salaryBrakdown.PayPerPeriod = salaryBrakdown?.PayFrequency?.CalculePeriodPay(salaryBrakdown.NetIncome) ?? 0;
+			if (salaryBrakdown == null)
+			{
+				return;
+			}
+
+			var payPerPeriod = salaryBrakdown?.PayFrequency?.CalculePeriodPay(salaryBrakdown.NetIncome) ?? 0;
+
+			salaryBrakdown.PayPerPeriod = (float)Math.Round(payPerPeriod, 2);
 		}
 	}
 }
